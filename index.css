@@ -16,14 +16,14 @@
 }
 
 .nav1 h1{
-    font-size: 65px;
+    font-size: 55px;
 }
 
 .nav1 p{
-    font-size: 18px;
+    font-size: 15px;
     position: relative;
     left: 38px;
-    bottom: 15px;
+    bottom: 12px;
 }
 
 .nav1 img{
@@ -31,6 +31,7 @@
     z-index: 20;
     position: relative;
     bottom: 15px;
+    right: -35px;
     
 }
 
@@ -39,14 +40,15 @@
     background-color: black;
     height: 35px;
     justify-content: flex-start;
+    
 }
 
 .nav-items{
     height: 35px;
     display: flex;
-    padding-top: 5px;
-    
-    margin-left: 25px;
+    padding-top: 8px;
+    margin-left: 5px;
+
     
 }
 
@@ -223,6 +225,23 @@ width: 90%;
     }
     .b-nav-box li, .b-nav-box h2{
         margin-top: 30px;
+    }
+
+    .nav-items{
+       
+        margin-left: 55px;
+    }
+
+    .nav1 h1, .nav1 p{
+        font-size: 75px;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .nav1 p{
+        font-size: 17px;
+        bottom: 17px;
+        left: 45px;
     }
 }
 
