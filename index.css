@@ -27,7 +27,11 @@
 }
 
 .nav1 img{
-    width: 80px;
+    width: 125px;
+    z-index: 20;
+    position: relative;
+    bottom: 3px;
+    
 }
 
 .nav2{
