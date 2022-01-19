@@ -27,7 +27,7 @@
 }
 
 .nav1 img{
-    width: 155px;
+    width: 125px;
     z-index: 20;
     position: relative;
     bottom: 15px;
@@ -243,6 +243,8 @@ width: 90%;
         bottom: 17px;
         left: 45px;
     }
+    .nav1 img{
+        width: 155px;}
 }
 
 
