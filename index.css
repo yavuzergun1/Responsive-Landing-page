@@ -39,7 +39,7 @@
    
     background-color: black;
     height: 35px;
-    justify-content: flex-start;
+    
     
 }
 
@@ -48,7 +48,7 @@
     display: flex;
     padding-top: 8px;
     margin-left: 5px;
-
+    justify-content:left;
     
 }
 
@@ -59,6 +59,28 @@
     display: none;
     
 }
+.nav-item2-none{
+    background-color: rgb(241, 191, 53);
+    position: relative;
+    display:grid;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: .5s;
+   
+    
+}
+
+.nav-item2-block{
+    background-color: rgb(241, 191, 53);
+    position: relative;
+    top: 5px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: 0% -100%;
+    transform: scale(1);
+    transition: .5s;
+}
+
 .nav-items>li:nth-child(4)>a:hover + ul.nav-items-a{
     display: block;
     
