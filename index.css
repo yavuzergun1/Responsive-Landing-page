@@ -17,6 +17,8 @@
 
 .nav1 h1{
     font-size: 55px;
+    overflow: hidden;
+
 }
 
 .nav1 p{
@@ -24,15 +26,18 @@
     position: relative;
     left: 38px;
     bottom: 12px;
+    overflow: hidden;
+
 }
 
 .nav1 img{
     width: 125px;
-    z-index: 1;
+    z-index: 0;
     position: relative;
     bottom: 8px;
     right: -35px;
-    
+    overflow: hidden;
+
 }
 
 .nav2{
@@ -53,6 +58,8 @@
 .nav-items>li{
     padding-left: 10px;
     font-size: 15px;
+    overflow: hidden;
+
 }
 
 .nav-item1-none{
@@ -269,6 +276,8 @@ width: 90%;
 .container-right h2, .container-right p{
     text-align: center;
     padding: 10px;
+    overflow: hidden;
+
 }
 
 .container-right img{
@@ -280,7 +289,6 @@ width: 90%;
 
 .container-right p{
     width: 80%;
-    align-self: center;
     text-align:left;
     
 }
