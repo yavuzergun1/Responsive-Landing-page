@@ -139,7 +139,7 @@
     background-color: rgb(241, 191, 53);
     width:fit-content;
     position: absolute;
-    left: 250px;
+    left: 200px;
     top: 33px;
     border-radius: 5px;
     padding: 8px;
@@ -154,7 +154,7 @@
     background-color: rgb(241, 191, 53);
     width:fit-content;
     position: absolute;
-    left: 250px;
+    left: 200px;
     top: 33px;
     border-radius: 5px;
     padding: 8px;
@@ -395,6 +395,46 @@ width: 90%;
     }
     .nav1 img{
         width: 155px;}
+
+        .nav-item1-none{
+            top: 50px;
+            left: 0px;
+        }
+        .nav-item1-block{
+            top: 50px;
+            left: 0px;
+        }
+
+        .nav-item2-none{
+            top: 50px;
+            left: 120px;
+            transform-origin: top;
+        }
+        .nav-item2-block{
+            top: 50px;
+            left: 120px;
+            transform-origin: top;
+        }
+
+        .nav-item3-none{
+            top: 50px;
+            left: 250px;
+            transform-origin: top;
+        }
+        .nav-item3-block{
+            top: 50px;
+            left: 250px;
+            transform-origin: top;
+        }
+
+        .nav-item4-none{
+            left: 450px;
+        }
+        .nav-item4-block{
+            top: 50px;
+            left: 450px;
+            transform-origin: top;
+        }
 }
 
 
