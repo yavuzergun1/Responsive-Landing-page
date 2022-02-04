@@ -28,7 +28,7 @@
 
 .nav1 img{
     width: 125px;
-    z-index: 20;
+    z-index: 1;
     position: relative;
     bottom: 8px;
     right: -35px;
@@ -36,11 +36,8 @@
 }
 
 .nav2{
-   
     background-color: black;
     height: 35px;
-    
-    
 }
 
 .nav-items{
@@ -48,23 +45,66 @@
     display: flex;
     padding-top: 8px;
     margin-left: 5px;
-    justify-content:left;
+    justify-content:left; 
+    position:relative;
+
+}
+
+.nav-items>li{
+    padding-left: 25px;
+    font-size: 20px;
+}
+
+.nav-item1-none{
+    background-color: rgb(241, 191, 53);
+    width:fit-content;
+    position: absolute;
+    left: 5px;
+    top: 33px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: .5s;
+   
     
 }
 
-.nav-items-a{
+.nav-item1-block{
     background-color: rgb(241, 191, 53);
-    position: relative;
+    width:fit-content;
+    position: absolute;
+    left: 5px;
+    top: 33px;
     border-radius: 5px;
-    display: none;
-    
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: .5s;
+    box-shadow: 0px 1px 7px 4px #000000,  inset 0px 1px 4px 4px rgba(240, 213, 163, 0.63);
 }
+
+.nav-item1-block>li{
+    list-style:inside;
+   color: black;
+}
+
+.nav-item1-none>li{
+    list-style:inside;
+   color: black;
+}
+
+
 .nav-item2-none{
     background-color: rgb(241, 191, 53);
-    position: relative;
-    display:grid;
+    width:fit-content;
+    position: absolute;
+    left: 110px;
+    top: 33px;
     border-radius: 5px;
-    transform: scale(0);
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(0);
     transition: .5s;
    
     
@@ -72,27 +112,114 @@
 
 .nav-item2-block{
     background-color: rgb(241, 191, 53);
-    position: relative;
-    top: 5px;
+    width:fit-content;
+    position: absolute;
+    left: 110px;
+    top: 33px;
     border-radius: 5px;
     padding: 8px;
-    transform-origin: 0% -100%;
-    transform: scale(1);
+    transform-origin: top;
+    transform: scaleY(1);
     transition: .5s;
+    box-shadow: 0px 1px 7px 4px #000000,  inset 0px 1px 4px 4px rgba(240, 213, 163, 0.63);
 }
 
-.nav-items>li:nth-child(4)>a:hover + ul.nav-items-a{
-    display: block;
+.nav-item2-block>li{
+    list-style:inside;
+   color: black;
+}
+
+.nav-item2-none>li{
+    list-style:inside;
+   color: black;
+}
+
+
+.nav-item3-none{
+    background-color: rgb(241, 191, 53);
+    width:fit-content;
+    position: absolute;
+    left: 250px;
+    top: 33px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: .5s;
+   
     
 }
 
-.nav-items>li:nth-child(4)>a:hover, ul.nav-items-a:hover{
-    display: block;
+.nav-item3-block{
+    background-color: rgb(241, 191, 53);
+    width:fit-content;
+    position: absolute;
+    left: 250px;
+    top: 33px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: .5s;
+    box-shadow: 0px 1px 7px 4px #000000,  inset 0px 1px 4px 4px rgba(240, 213, 163, 0.63);
+}
+
+.nav-item3-block>li{
+    list-style:inside;
+   color: black;
+}
+
+.nav-item3-none>li{
+    list-style:inside;
+   color: black;
+}
+
+
+.nav-item4-none{
+    background-color: rgb(241, 191, 53);
+    width:fit-content;
+    position: absolute;
+    left: 250px;
+    top: 33px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: .5s;
+   
+    
+}
+
+.nav-item4-block{
+    background-color: rgb(241, 191, 53);
+    width:fit-content;
+    position: absolute;
+    left: 300px;
+    top: 33px;
+    border-radius: 5px;
+    padding: 8px;
+    transform-origin: top;
+    transform: scaleY(1);
+    transition: .5s;
+    box-shadow: 0px 1px 7px 4px #000000,  inset 0px 1px 4px 4px rgba(240, 213, 163, 0.63);
+}
+
+.nav-item4-block>li{
+    list-style:inside;
+   color: black;
+}
+
+.nav-item4-none>li{
+    list-style:inside;
+   color: black;
+}
+.item4{
+    z-index: 2;
 }
 
 .nav-items li{
     padding-right: 20px;
-    list-style: none;
+   
 }
 
 .nav-items>li>a, .nav-items ul {
@@ -101,14 +228,7 @@
     color: whitesmoke;
 }
 
-#nav-items-a {
-    transform: translate(-25px);
-    width: fit-content;
-    list-style:georgian ;
-    padding: 15px;
-    border: 1px solid whitesmoke;
-    box-shadow: 20px;
-}
+
 
 .container{
     display: flex;
