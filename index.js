@@ -109,3 +109,66 @@ function altSondurKupur(e){
     e.preventDefault();
 item4None.className='nav-item4-none';
 }
+
+
+let kupurler= [
+
+{
+    image: 'img/image (42).png',
+    description: '2 Dünya Savaşı Dönemi'
+},
+
+{
+    image: 'img/image (45).png',
+    description: 'Sene 1935 - Bir şarap reklamı'
+},
+
+{
+    image: 'img/image (93).png',
+    description: 'Sene 1936 - Diş macunu reklamı'
+},
+
+{
+    image: 'img/son posta_1937_mart_12_.pdf.png',
+    description: 'Sene 1937 - Atatürk\'ün Ankara\'ya gelişi'
+},
+
+{
+    image: 'img/son telgraf_1937_mart_17_.pdf.png',
+    description: 'Sene 1937 - Yorgun ve Bitkin Dünya'
+},
+
+{
+    image: 'img/ulus_1941_mart_18_.pdf.png',
+    description: 'Sene 1941 - Tarlada çalışan emekçi kadınlar'
+}
+
+];
+
+let index= 1;
+let slaytCount= kupurler.length;
+showSlide(index);
+
+document.querySelector('.fa-arrow-left').addEventListener('click', function sol (){
+    index--;
+    showSlide(index);
+});
+
+document.querySelector('.fa-arrow-right').addEventListener('click', function sol (){
+    index++;
+    showSlide(index);
+});
+
+function showSlide(i){      /* Buradaki i değişkeni neden konmuş? neden direk index denmemiş anlayamadım*/
+    i=index;
+if(i<0){
+    index= slaytCount-1;        
+}
+if(i>=slaytCount){
+    index=0;
+}
+
+
+document.querySelector('.kupur').setAttribute('src', kupurler[index].image);
+document.querySelector('#img-des').textContent= kupurler[index].description;
+};
