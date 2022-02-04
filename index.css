@@ -52,7 +52,7 @@
 
 .nav-items>li{
     padding-left: 25px;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .nav-item1-none{
@@ -368,10 +368,18 @@ width: 90%;
     .b-nav-box li, .b-nav-box h2{
         margin-top: 30px;
     }
-
+.nav2{
+    display: flex;
+    padding-bottom: 40px;
+}
     .nav-items{
-       
+       display: flex;
         margin-left: 55px;
+    }
+
+    .nav-items li{
+       font-size: 25px;
+        
     }
 
     .nav1 h1, .nav1 p{
