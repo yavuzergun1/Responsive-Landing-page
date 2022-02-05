@@ -229,7 +229,7 @@
    
 }
 
-.nav-items>li>a, .nav-items ul {
+.nav-items>li, .nav-items ul {
     text-decoration: none;
     list-style: none;
     color: whitesmoke;
@@ -283,7 +283,7 @@ width: 90%;
     font-size: 15px;
     text-align: center;
    position: relative;
-   top: 56px;
+   top: 50px;
     
 }
 

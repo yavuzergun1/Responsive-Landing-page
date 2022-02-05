@@ -2,32 +2,9 @@ const anasayfa= document.querySelector('.item1');
 const item1Block = document.querySelector('.nav-item1-block');
 const item1None = document.querySelector('.nav-item1-none');
 const nav2= document.querySelector('.nav2');
-let nav2Size= nav2.clientWidth;
+let nav2size= nav2.clientWidth;
+let genislik= window.screen.width;
 
-if(nav2Size < 500){
-    anasayfa.addEventListener('click', olusturAnasayfa);
-
-    function olusturAnasayfa(e){
-        e.preventDefault();
-    item1None.className='nav-item1-block';
-    }
-    anasayfa.addEventListener('click', sondurAnasayfa);
-    function sondurAnasayfa(e){
-        e.preventDefault();
-    item1None.className='nav-item1-none';
-    }
-    item1None.addEventListener('click', altOlusturAnasayfa);
-    function altOlusturAnasayfa(e){
-        e.preventDefault();
-    item1None.className='nav-item1-block';
-    }
-    item1None.addEventListener('click', altSondurAnasayfa);
-    function altSondurAnasayfa(e){
-        e.preventDefault();
-    item1None.className='nav-item1-none';
-    }
-    console.log(nav2Size);
-} else{ 
 anasayfa.addEventListener('mouseover', olusturAnasayfa);
 
 function olusturAnasayfa(e){
@@ -49,7 +26,7 @@ function altSondurAnasayfa(e){
     e.preventDefault();
 item1None.className='nav-item1-none';
 }
-};
+
 
 
 const hakkimizda= document.querySelector('.item2');
