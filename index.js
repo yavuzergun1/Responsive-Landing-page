@@ -150,7 +150,7 @@ let kupurler= [
 let index= 0;
 let slaytCount= kupurler.length;
 let settings={
-    duration: '1000',
+    duration: '2000',
     random: false
 }
 
@@ -222,10 +222,3 @@ document.querySelector('#img-des').textContent= kupurler[index].description;
 };
 
 
-/* function show(i){
-    i=indeks
-    i=i-1
-    console.log(i);
-}
-
-show(5) */
