@@ -1,8 +1,33 @@
 const anasayfa= document.querySelector('.item1');
-const item1Block = document.querySelector('.nav-item1-block')
-const item1None = document.querySelector('.nav-item1-none')
+const item1Block = document.querySelector('.nav-item1-block');
+const item1None = document.querySelector('.nav-item1-none');
+const nav2= document.querySelector('.nav2');
+let nav2Size= nav2.clientWidth;
 
+if(nav2Size < 500){
+    anasayfa.addEventListener('click', olusturAnasayfa);
 
+    function olusturAnasayfa(e){
+        e.preventDefault();
+    item1None.className='nav-item1-block';
+    }
+    anasayfa.addEventListener('click', sondurAnasayfa);
+    function sondurAnasayfa(e){
+        e.preventDefault();
+    item1None.className='nav-item1-none';
+    }
+    item1None.addEventListener('click', altOlusturAnasayfa);
+    function altOlusturAnasayfa(e){
+        e.preventDefault();
+    item1None.className='nav-item1-block';
+    }
+    item1None.addEventListener('click', altSondurAnasayfa);
+    function altSondurAnasayfa(e){
+        e.preventDefault();
+    item1None.className='nav-item1-none';
+    }
+    console.log(nav2Size);
+} else{ 
 anasayfa.addEventListener('mouseover', olusturAnasayfa);
 
 function olusturAnasayfa(e){
@@ -24,7 +49,7 @@ function altSondurAnasayfa(e){
     e.preventDefault();
 item1None.className='nav-item1-none';
 }
-
+};
 
 
 const hakkimizda= document.querySelector('.item2');
@@ -145,30 +170,85 @@ let kupurler= [
 
 ];
 
-let index= 1;
+let index= 0;
 let slaytCount= kupurler.length;
+let settings={
+    duration: '1000',
+    random: false
+}
+
 showSlide(index);
+slider(settings);
 
 document.querySelector('.fa-arrow-left').addEventListener('click', function sol (){
     index--;
     showSlide(index);
+    console.log(index);
 });
 
 document.querySelector('.fa-arrow-right').addEventListener('click', function sol (){
     index++;
     showSlide(index);
+    console.log(index);
 });
 
+document.querySelectorAll('.fas').forEach(function(item){ 
+    item.addEventListener('mouseenter', function(){
+    clearInterval(interval);
+    })});
+
+    document.querySelectorAll('.fas').forEach(function(item){ 
+        item.addEventListener('mouseleave', function(){
+        slider(settings);
+        })});
+
+function slider (settings){
+    let prev=2;
+   interval=  setInterval(function(){
+if(settings.random){
+/* aynı sayıyı tekrar üretmesin diye  while 'a şart koyduk*/
+    do{
+        index= Math.floor( Math.random()*slaytCount);
+    } while(index==prev)
+prev=index;
+   
+} else {
+    if(slaytCount == index+1){
+        index=-1;
+    } 
+    showSlide(index)
+    console.log(index);
+    index++
+ 
+}
+
+    }, settings.duration)
+}
+
+
+
+
 function showSlide(i){      /* Buradaki i değişkeni neden konmuş? neden direk index denmemiş anlayamadım*/
-    i=index;
+    
 if(i<0){
-    index= slaytCount-1;        
+    index= slaytCount-1;    
+     
 }
 if(i>=slaytCount){
     index=0;
+    
 }
 
 
 document.querySelector('.kupur').setAttribute('src', kupurler[index].image);
 document.querySelector('#img-des').textContent= kupurler[index].description;
 };
+
+
+/* function show(i){
+    i=indeks
+    i=i-1
+    console.log(i);
+}
+
+show(5) */
